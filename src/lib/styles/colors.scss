@@ -1,15 +1,16 @@
 :root {
   // Basis
   --black: #111317;
-  --green: #0dd8be;
-  --blue: #3166dd;
-  --purple: #7a73ff;
+  --green: #06a77d;
+  --blue: #6494ff;
+  --purple: #737ef4;
+  --orange: #edb458;
   --white: #ffffff;
 
   // Themer
   --foreground: var(--white);
   --foreground-accent: var(--green);
-  --foreground-accent-secondary: var(--purple);
+  --foreground-accent-secondary: var(--blue);
 
   --background: var(--black);
 

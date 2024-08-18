@@ -3,7 +3,7 @@
 </svelte:head>
 
 <section class="intro">
-  <h1>Hi, I'm <span class="name">Thomas!</span></h1>
+  <h1>Hi, I'm <span class="name">Thomas</span>!</h1>
   <p>A Frontend Developer @ <span class="company">Triple</span></p>
 </section>
 
