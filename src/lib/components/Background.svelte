@@ -14,20 +14,14 @@
     right: 0;
     top: 0;
     bottom: 0;
-    max-width: 144rem;
-    margin-left: auto;
-    margin-right: auto;
-
-    @include phone-only {
-      overflow: hidden;
-    }
+    overflow: hidden;
   }
 
   .blob {
     position: absolute;
     opacity: 0.75;
     filter: blur(7.5rem);
-    border-radius: 50%;
+    border-radius: 0 0 50% 50%;
 
     @include phone-only {
       opacity: 0.9;
@@ -36,7 +30,7 @@
   }
 
   .small-blob {
-    width: 50rem;
+    width: 50%;
     height: 46rem;
     top: -30rem;
 
@@ -47,14 +41,13 @@
     }
 
     @include tablet-only {
-      width: 40rem;
       height: 35rem;
       top: -20rem;
     }
   }
 
   .big-blob {
-    width: 60rem;
+    width: 70%;
     height: 50rem;
     top: -30rem;
 
@@ -65,54 +58,41 @@
     }
 
     @include tablet-only {
-      width: 50rem;
       height: 50rem;
       top: -25rem;
     }
   }
 
   .blue-blob {
-    right: 10rem;
+    right: -10%;
     background: var(--blob2);
     animation: moveSmallBlob 2.5s infinite;
 
     @include phone-only {
       right: -5rem;
     }
-
-    @include tablet-only {
-      right: 5rem;
-    }
   }
 
   .purple-blob {
-    left: 10rem;
+    left: -10%;
     background: var(--blob3);
     animation: moveSmallBlob 3.5s infinite;
 
     @include phone-only {
       left: -5rem;
     }
-
-    @include tablet-only {
-      left: 5rem;
-    }
   }
 
   .green-blob {
-    left: 50%;
-    margin-left: -30rem;
+    left: 15%;
 
     background: var(--blob1);
     animation: moveBigBlob 3s infinite;
 
     @include phone-only {
+      left: 50%;
       margin-left: -15rem;
       top: -40rem;
-    }
-
-    @include tablet-only {
-      margin-left: -25rem;
     }
   }
 
