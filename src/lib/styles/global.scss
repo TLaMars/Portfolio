@@ -1,0 +1,14 @@
+@use "./utils.scss" as *;
+@use "./colors.scss" as *;
+@use "./fonts.scss" as *;
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--background);
+  padding: 0;
+  margin: 0;
+  font-family: "Righteous", sans-serif;
+}

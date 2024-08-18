@@ -1,0 +1,6 @@
+{
+  "root": true,
+  "extends": ["triple/svelte"],
+  "env": { "browser": true, "node": true },
+  "parserOptions": { "project": "./tsconfig.eslint.json" }
+}
