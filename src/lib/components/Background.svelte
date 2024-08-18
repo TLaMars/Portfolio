@@ -19,7 +19,7 @@
 
   .blob {
     position: absolute;
-    opacity: 0.75;
+    opacity: 0.9;
     filter: blur(7.5rem);
     border-radius: 0 0 50% 50%;
 
