@@ -2,9 +2,9 @@
   // Basis
   --black: rgb(26, 29, 35);
   --green: rgb(6, 167, 125);
-  --green-alpha: rgba(6, 167, 125, 0.25);
+  --dark-green: rgb(21, 64, 57);
   --blue: rgb(100, 148, 255);
-  --blue-alpha: rgba(100, 148, 255, 0.25);
+  --dark-blue: rgb(44, 59, 90);
   --purple: rgb(115, 126, 244);
   --purple-alpha: rgba(115, 126, 244, 0.25);
   --orange: rgb(237, 180, 88);
@@ -16,8 +16,8 @@
   --foreground-accent-secondary: var(--blue);
 
   --background: var(--black);
-  --background-surface-1: var(--green-alpha);
-  --background-surface-2: var(--blue-alpha);
+  --background-surface-1: var(--dark-green);
+  --background-surface-2: var(--dark-blue);
 
   --blob1: var(--green);
   --blob2: var(--blue);

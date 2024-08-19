@@ -19,7 +19,6 @@
     text-align: center;
     margin-top: 28rem;
     margin-bottom: 28rem;
-    padding: 0 1rem;
   }
 
   .title {
