@@ -1,11 +1,14 @@
 :root {
   // Basis
-  --black: #1a1d23;
-  --green: #06a77d;
-  --blue: #6494ff;
-  --purple: #737ef4;
-  --orange: #edb458;
-  --white: #ffffff;
+  --black: rgb(26, 29, 35);
+  --green: rgb(6, 167, 125);
+  --green-alpha: rgba(6, 167, 125, 0.25);
+  --blue: rgb(100, 148, 255);
+  --blue-alpha: rgba(100, 148, 255, 0.25);
+  --purple: rgb(115, 126, 244);
+  --purple-alpha: rgba(115, 126, 244, 0.25);
+  --orange: rgb(237, 180, 88);
+  --white: rgb(255, 255, 255);
 
   // Themer
   --foreground: var(--white);
@@ -13,6 +16,8 @@
   --foreground-accent-secondary: var(--blue);
 
   --background: var(--black);
+  --background-surface-1: var(--green-alpha);
+  --background-surface-2: var(--blue-alpha);
 
   --blob1: var(--green);
   --blob2: var(--blue);

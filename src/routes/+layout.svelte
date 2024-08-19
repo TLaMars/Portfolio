@@ -4,8 +4,8 @@
 </script>
 
 <!-- markup (zero or more items) goes here -->
-<slot></slot>
 <Background />
+<slot></slot>
 
 <style>
   /* your styles go here */
