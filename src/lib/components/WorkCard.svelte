@@ -6,13 +6,15 @@
   export let image: string;
   export let type: "blue" | "green" = "blue";
   export let small = true;
+  export let slug: string;
 </script>
 
-<div
+<a
   class="card"
   class:small
   class:green={type === "green"}
   class:blue={type === "blue"}
+  href={slug}
 >
   <p class="subtitle">{subtitle}</p>
   <h2 class="title">{title}</h2>
@@ -21,7 +23,7 @@
   <div class="fab" class:green={type === "green"} class:blue={type === "blue"}>
     <ArrowRight />
   </div>
-</div>
+</a>
 
 <style lang="scss">
   @use "../styles/utils.scss" as *;
@@ -33,6 +35,10 @@
     min-height: 38rem;
     overflow: hidden;
     width: calc(100% - 9.6rem);
+
+    &:hover {
+      color: var(--foreground);
+    }
 
     &.green {
       background: var(--background-surface-1);

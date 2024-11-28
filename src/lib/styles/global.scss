@@ -25,3 +25,19 @@ h5,
 h6 {
   font-family: var(--font-heading);
 }
+
+p,
+a,
+li {
+  font-size: 1.6rem;
+}
+
+a {
+  color: var(--foreground);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--foreground-accent);
+  }
+}

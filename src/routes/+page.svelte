@@ -1,6 +1,11 @@
-<script>
+<script lang="ts">
   import PageHeader from "$lib/components/PageHeader.svelte";
   import WorkCard from "$lib/components/WorkCard.svelte";
+  import type { Work } from "$lib/models/work";
+
+  export let data: {
+    work: Work[];
+  };
 </script>
 
 <svelte:head>
@@ -13,25 +18,14 @@
 />
 
 <div class="work-section">
-  <WorkCard
-    title="Gitbar"
-    subtitle="Your new Mac PR tool"
-    image="/images/gitbar.png"
-    type="green"
-  />
-  <WorkCard
-    title="Gitbar"
-    subtitle="Your new Mac PR tool"
-    image="/images/gitbar.png"
-    type="blue"
-  />
-  <WorkCard
-    title="Gitbar"
-    subtitle="Your new Mac PR tool"
-    image="/images/gitbar.png"
-    type="blue"
-    small={false}
-  />
+  {#each data.work as { name, shortDescription, image, slug }, i}
+    <WorkCard
+      title={name}
+      subtitle={shortDescription}
+      {image}
+      slug="work/{slug}"
+    />
+  {/each}
 </div>
 
 <style lang="scss">

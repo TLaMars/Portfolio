@@ -2,8 +2,6 @@
   export let title: string;
   export let subtitle: string | undefined = undefined;
   export let marginSize: "title-page" | "sub-page" = "title-page";
-
-  console.log(marginSize);
 </script>
 
 <header
