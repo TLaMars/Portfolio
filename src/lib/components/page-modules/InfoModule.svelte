@@ -1,29 +1,26 @@
 <script lang="ts">
-  export let timeline: string;
-  export let type: string;
-  export let productURL: string;
-  export let productLabel: string;
+  import type { Info } from "$lib/models/info";
+
+  export let info: Info[];
 </script>
 
-<section class="work-info">
-  <div>
-    <h4>Timeline</h4>
-    <p>{timeline}</p>
-  </div>
-  <div>
-    <h4>Type</h4>
-    <p>{type}</p>
-  </div>
-  <div>
-    <h4>Product</h4>
-    <a href={productURL} target="_blank">{productLabel}</a>
-  </div>
+<section class="info">
+  {#each info as { title, description, href } (title)}
+    <div>
+      <h4>{title}</h4>
+      {#if href}
+        <a {href} target="_blank">{description}</a>
+      {:else}
+        <p>{description}</p>
+      {/if}
+    </div>
+  {/each}
 </section>
 
 <style lang="scss">
-  @use "../../lib/styles/utils.scss" as *;
+  @use "../../../lib/styles/utils.scss" as *;
 
-  .work-info {
+  .info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.4rem;

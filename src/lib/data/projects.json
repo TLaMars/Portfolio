@@ -5,16 +5,39 @@
     "shortDescription": "Your new mac PR tool",
     "image": "/images/gitbar.png",
     "imagePosition": "fill",
-    "timeline": "2024 - present",
-    "type": "macOS app",
-    "projectUrl": "https://gitbar.lamars.io",
-    "projectUrlLabel": "Download Gitbar",
-    "summary": {
-      "paragraphs": [
-        "GitBar is a macOS app that helps developers keep track of all their open pull requests in a single view. This will result in a more organized workflow.",
-        "The app is easily accessible from the macOS menubar, where a Pull Request icon shows what the amount of Pull Requests are that you still have to look at ;). It doesn’t matter if it is a GitLab, GitHub or Azure account they are all supported. You can even login with multiple accounts."
-      ]
-    }
+    "modules": [
+      {
+        "moduleType": "InfoModule",
+        "info": [
+          {
+            "title": "Timeline",
+            "description": "2024 - present"
+          },
+          {
+            "title": "Type",
+            "description": "macOS app"
+          },
+          {
+            "title": "Product",
+            "description": "Download Gitbar",
+            "href": "https://gitbar.lamars.io"
+          }
+        ]
+      },
+      {
+        "moduleType": "ImageModule",
+        "src": "/images/gitbar.png",
+        "alt": "GitBar Dashboard"
+      },
+      {
+        "moduleType": "ContentModule",
+        "title": "Summary",
+        "paragraphs": [
+          "GitBar is a macOS app that helps developers keep track of all their open pull requests in a single view. This will result in a more organized workflow.",
+          "The app is easily accessible from the macOS menubar, where a Pull Request icon shows what the amount of Pull Requests are that you still have to look at ;). It doesn’t matter if it is a GitLab, GitHub or Azure account they are all supported. You can even login with multiple accounts."
+        ]
+      }
+    ]
   },
   {
     "slug": "vfz-app",
@@ -22,15 +45,38 @@
     "shortDescription": "Combined Vodafone and Ziggo app",
     "image": "/images/vfz-dashboard.png",
     "imagePosition": "center",
-    "timeline": "2022 - 2024",
-    "type": "iOS/Android app",
-    "projectUrl": "https://www.ziggo.nl/klantenservice/internet-wifi/apps/vodafone-en-ziggo-app",
-    "projectUrlLabel": "Marketing page",
-    "summary": {
-      "paragraphs": [
-        "The VFZ app is a combined app for Vodafone and Ziggo customers. The app is available for both iOS and Android. The app is built with React Native and is available in the App Store and Google Play Store.",
-        "The app is used by more than a million customers to manage their subscriptions, view their invoices, and contact customer service. But also to do things like checking their data usage, changing their subscription, and manage their modem."
-      ]
-    }
+    "modules": [
+      {
+        "moduleType": "InfoModule",
+        "info": [
+          {
+            "title": "Timeline",
+            "description": "2022 - 2024"
+          },
+          {
+            "title": "Type",
+            "description": "iOS/Android app"
+          },
+          {
+            "title": "Product",
+            "description": "Marketing page",
+            "href": "https://www.ziggo.nl/klantenservice/internet-wifi/apps/vodafone-en-ziggo-app"
+          }
+        ]
+      },
+      {
+        "moduleType": "ImageModule",
+        "src": "/images/vfz-dashboard.png",
+        "alt": "VFZ App Dashboard"
+      },
+      {
+        "moduleType": "ContentModule",
+        "title": "Summary",
+        "paragraphs": [
+          "The VFZ app is a combined app for Vodafone and Ziggo customers. The app is available for both iOS and Android. The app is built with React Native and is available in the App Store and Google Play Store.",
+          "The app is used by more than a million customers to manage their subscriptions, view their invoices, and contact customer service. But also to do things like checking their data usage, changing their subscription, and manage their modem."
+        ]
+      }
+    ]
   }
 ]
