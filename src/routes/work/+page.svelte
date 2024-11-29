@@ -9,13 +9,10 @@
 </script>
 
 <svelte:head>
-  <title>Thomas Lamars | FE Developer</title>
+  <title>Thomas Lamars | Work</title>
 </svelte:head>
 
-<PageHeader
-  title="Hi, I'm <span style='color: var(--foreground-accent-secondary);'>Thomas!</span>"
-  subtitle="A Frontend Developer @ <span style='color: var(--foreground-accent)'>Triple</span>"
-/>
+<PageHeader title="My Work" subtitle="All the projects I've worked on" />
 
 <div class="work-section">
   {#each data.work as { name, shortDescription, image, slug, imagePosition }}
@@ -30,7 +27,7 @@
 </div>
 
 <style lang="scss">
-  @use "../lib/styles/utils.scss" as *;
+  @use "../../lib/styles/utils.scss" as *;
   .work-section {
     position: relative;
     max-width: 140rem;

@@ -12,14 +12,18 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
+    top: -10rem;
     bottom: 0;
     overflow: hidden;
+
+    @include phone-only {
+      top: -0rem;
+    }
   }
 
   .blob {
     position: absolute;
-    opacity: 0.75;
+    opacity: 0.9;
     filter: blur(7.5rem);
     border-radius: 0 0 50% 50%;
 
@@ -32,7 +36,7 @@
   .small-blob {
     width: 50%;
     height: 46rem;
-    top: -30rem;
+    top: -27.5rem;
 
     @include phone-only {
       width: 30rem;
