@@ -1,24 +1,31 @@
 <script lang="ts">
+  import type { ImagePosition } from "$lib/models/work";
   import ArrowRight from "./svgs/ArrowRight.svelte";
 
   export let title: string;
   export let subtitle: string;
   export let image: string;
+  export let imagePosition: ImagePosition = "fill";
   export let type: "blue" | "green" = "blue";
-  export let small = true;
   export let slug: string;
 </script>
 
 <a
   class="card"
-  class:small
   class:green={type === "green"}
   class:blue={type === "blue"}
   href={slug}
 >
   <p class="subtitle">{subtitle}</p>
   <h2 class="title">{title}</h2>
-  <img class="image" src={image} alt={title} />
+  <div class="image-holder">
+    <img
+      class="image"
+      class:center={imagePosition === "center"}
+      src={image}
+      alt={title}
+    />
+  </div>
 
   <div class="fab" class:green={type === "green"} class:blue={type === "blue"}>
     <ArrowRight />
@@ -32,7 +39,7 @@
     position: relative;
     padding: 3.2rem 4.8rem;
     border-radius: 4.8rem;
-    min-height: 38rem;
+    height: 38rem;
     overflow: hidden;
     width: calc(100% - 9.6rem);
 
@@ -48,12 +55,8 @@
       background: var(--background-surface-2);
     }
 
-    &.small {
-      flex: 1;
-    }
-
     @include phone-only {
-      min-height: 24rem;
+      height: 24rem;
       padding: 2.4rem 3.4rem;
       border-radius: 3.4rem;
     }
@@ -81,9 +84,15 @@
     }
   }
 
-  .image {
+  .image-holder {
+    position: relative;
     width: 100%;
-    position: absolute;
+  }
+
+  .image {
+    &.center {
+      width: 100%;
+    }
   }
 
   .fab {

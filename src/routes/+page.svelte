@@ -32,16 +32,20 @@
   @use "../lib/styles/utils.scss" as *;
   .work-section {
     position: relative;
-    max-width: 128rem;
+    max-width: 140rem;
     width: 100%;
     margin-bottom: 6.4rem;
-    gap: 4.8rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    gap: 5.2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    :global(*:nth-child(4n + 1)),
+    :global(*:nth-child(4n + 4)) {
+      grid-column: auto / span 2;
+    }
 
     @include tablet-and-smaller {
-      flex-direction: column;
+      grid-template-columns: repeat(3, 1fr);
     }
 
     @include phone-only {

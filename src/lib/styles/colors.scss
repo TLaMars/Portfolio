@@ -1,6 +1,7 @@
 :root {
   // Basis
   --black: rgb(26, 29, 35);
+  --black-opaque: rgb(26, 29, 35, 0.1);
   --green: rgb(6, 167, 125);
   --dark-green: rgb(21, 64, 57);
   --blue: rgb(100, 148, 255);
@@ -9,8 +10,9 @@
   --purple-alpha: rgba(115, 126, 244, 0.25);
   --orange: rgb(237, 180, 88);
   --white: rgb(255, 255, 255);
+  --white-opaque: rgba(255, 255, 255, 0.1);
 
-  // Themer
+  // Theme
   --foreground: var(--white);
   --foreground-accent: var(--green);
   --foreground-accent-secondary: var(--blue);
@@ -18,6 +20,8 @@
   --background: var(--black);
   --background-surface-1: var(--dark-green);
   --background-surface-2: var(--dark-blue);
+  --background-secondary: var(--black-opaque);
+  --background-active: var(--white-opaque);
 
   --blob1: var(--green);
   --blob2: var(--blue);

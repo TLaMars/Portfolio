@@ -3,6 +3,7 @@ export type Work = {
   name: string;
   shortDescription: string;
   image: string;
+  imagePosition: ImagePosition;
   timeline: string;
   type: string;
   projectUrl: string;
@@ -11,3 +12,5 @@ export type Work = {
     paragraphs: string[];
   };
 };
+
+export type ImagePosition = "fill" | "center";
