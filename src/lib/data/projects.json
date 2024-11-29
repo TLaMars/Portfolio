@@ -58,15 +58,14 @@
             "description": "iOS/Android app"
           },
           {
-            "title": "Product",
-            "description": "Marketing page",
-            "href": "https://www.ziggo.nl/klantenservice/internet-wifi/apps/vodafone-en-ziggo-app"
+            "title": "Employer",
+            "description": "Triple x VFZ"
           }
         ]
       },
       {
         "moduleType": "ImageModule",
-        "src": "/images/vfz-dashboard.png",
+        "src": "/images/vfz-hero.png",
         "alt": "VFZ App Dashboard"
       },
       {
@@ -75,6 +74,84 @@
         "paragraphs": [
           "The VFZ app is a combined app for Vodafone and Ziggo customers. The app is available for both iOS and Android. The app is built with React Native and is available in the App Store and Google Play Store.",
           "The app is used by more than a million customers to manage their subscriptions, view their invoices, and contact customer service. But also to do things like checking their data usage, changing their subscription, and manage their modem."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "kibbel",
+    "name": "Kibbel",
+    "shortDescription": "Your conversation starter",
+    "image": "/images/kibbel-question.png",
+    "imagePosition": "center",
+    "modules": [
+      {
+        "moduleType": "InfoModule",
+        "info": [
+          {
+            "title": "Timeline",
+            "description": "2023"
+          },
+          {
+            "title": "Type",
+            "description": "iOS/Android app"
+          },
+          {
+            "title": "Employer",
+            "description": "Triple"
+          }
+        ]
+      },
+      {
+        "moduleType": "ImageModule",
+        "src": "/images/kibbel-hero.png",
+        "alt": "Kibbel Question"
+      },
+      {
+        "moduleType": "ContentModule",
+        "title": "Summary",
+        "paragraphs": [
+          "Kibbel is a mobile app that helps you start a conversation with your friends, family, or colleagues. The app is available for both iOS and Android and is built with React Native.",
+          "The app contains a large collection of questions that you can ask to start conversations. If you don't like the question you can swipe to the next one. When you are done with the normal questions you can also use the spicy questions to get the conversation going."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "and-c",
+    "name": "&C",
+    "shortDescription": "The lifestyle brand of Chantal Janzen",
+    "image": "/images/andc.png",
+    "imagePosition": "fill",
+    "modules": [
+      {
+        "moduleType": "InfoModule",
+        "info": [
+          {
+            "title": "Timeline",
+            "description": "2021 - 2022"
+          },
+          {
+            "title": "Type",
+            "description": "Web platform"
+          },
+          {
+            "title": "Employer",
+            "description": "Triple"
+          }
+        ]
+      },
+      {
+        "moduleType": "ImageModule",
+        "src": "/images/andc-hero.png",
+        "alt": "&C"
+      },
+      {
+        "moduleType": "ContentModule",
+        "title": "Summary",
+        "paragraphs": [
+          "&C is the lifestyle brand of Chantal Janzen. The website is built with SvelteKit and is used to share the latest news, fashion, and lifestyle tips.",
+          "The website has a large collection of articles, videos, and interviews. The website is also used to promote the &C magazine and the &C shop."
         ]
       }
     ]
