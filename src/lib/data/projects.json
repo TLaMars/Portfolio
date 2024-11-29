@@ -20,7 +20,7 @@
     "slug": "vfz-app",
     "name": "VFZ App",
     "shortDescription": "Combined Vodafone and Ziggo app",
-    "image": "/images/vfz-app.png",
+    "image": "/images/vfz-dashboard.png",
     "imagePosition": "center",
     "timeline": "2022 - 2024",
     "type": "iOS/Android app",
