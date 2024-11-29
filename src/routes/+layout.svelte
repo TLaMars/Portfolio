@@ -4,9 +4,23 @@
 </script>
 
 <!-- markup (zero or more items) goes here -->
-<slot></slot>
-<Background />
+<main class="main">
+  <Background />
+  <slot />
+</main>
 
-<style>
-  /* your styles go here */
+<style lang="scss">
+  @use "$lib/styles/utils.scss" as *;
+
+  .main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2.4rem;
+
+    @include tablet-and-smaller {
+      padding: 0 1.6rem;
+    }
+  }
 </style>

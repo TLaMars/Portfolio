@@ -1,48 +1,51 @@
+<script lang="ts">
+  import PageHeader from "$lib/components/PageHeader.svelte";
+  import WorkCard from "$lib/components/WorkCard.svelte";
+  import type { Work } from "$lib/models/work";
+
+  export let data: {
+    work: Work[];
+  };
+</script>
+
 <svelte:head>
   <title>Thomas Lamars | FE Developer</title>
 </svelte:head>
 
-<section class="intro">
-  <h1>Hi, I'm <span class="name">Thomas</span>!</h1>
-  <p>A Frontend Developer @ <span class="company">Triple</span></p>
-</section>
+<PageHeader
+  title="Hi, I'm <span style='color: var(--foreground-accent-secondary);'>Thomas!</span>"
+  subtitle="A Frontend Developer @ <span style='color: var(--foreground-accent)'>Triple</span>"
+/>
+
+<div class="work-section">
+  {#each data.work as { name, shortDescription, image, slug }, i}
+    <WorkCard
+      title={name}
+      subtitle={shortDescription}
+      {image}
+      slug="work/{slug}"
+    />
+  {/each}
+</div>
 
 <style lang="scss">
   @use "../lib/styles/utils.scss" as *;
-
-  .intro {
-    z-index: 1;
+  .work-section {
+    position: relative;
+    max-width: 128rem;
+    width: 100%;
+    margin-bottom: 6.4rem;
+    gap: 4.8rem;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100dvh;
-    padding: 0 1rem;
-  }
-  h1 {
-    color: var(--foreground);
-    font-size: 8rem;
-    margin: 0;
+
+    @include tablet-and-smaller {
+      flex-direction: column;
+    }
 
     @include phone-only {
-      font-size: 5rem;
+      gap: 3.6rem;
     }
-  }
-  .name {
-    color: var(--foreground-accent);
-  }
-  p {
-    color: var(--foreground);
-    font-size: 4rem;
-    padding: 0;
-    margin: 0;
-
-    @include phone-only {
-      font-size: 2.5rem;
-    }
-  }
-  .company {
-    color: var(--foreground-accent-secondary);
   }
 </style>
