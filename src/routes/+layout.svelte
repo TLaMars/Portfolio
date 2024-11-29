@@ -1,10 +1,11 @@
 <script>
   import Background from "$lib/components/Background.svelte";
+  import Navigation from "$lib/components/Nav.svelte";
   import "$lib/styles/global.scss";
 </script>
 
-<!-- markup (zero or more items) goes here -->
 <main class="main">
+  <Navigation />
   <Background />
   <slot />
 </main>

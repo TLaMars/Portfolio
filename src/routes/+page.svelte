@@ -39,13 +39,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    :global(*:nth-child(4n + 1)),
-    :global(*:nth-child(4n + 4)) {
-      grid-column: auto / span 2;
+    @include desktop-only {
+      :global(*:nth-child(4n + 1)),
+      :global(*:nth-child(4n + 4)) {
+        grid-column: auto / span 2;
+      }
     }
 
     @include tablet-and-smaller {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
 
     @include phone-only {
