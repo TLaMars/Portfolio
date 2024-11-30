@@ -6,9 +6,15 @@
 <img {src} {alt} />
 
 <style lang="scss">
+  @use "../../../lib/styles/utils.scss" as *;
+
   img {
     width: 100%;
     max-width: 90rem;
-    margin: 9.2rem 0;
+    margin-bottom: var(--content-page-gap);
+
+    @include phone-only {
+      margin-bottom: var(--content-page-gap-mobile);
+    }
   }
 </style>

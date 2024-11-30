@@ -13,11 +13,11 @@
     padding: 1.2rem 2.4rem;
     border-radius: 5rem;
     transition: background 0.3s;
-    font-size: 1.4rem;
+    font-size: var(--font-size-s);
 
     @include phone-only {
       padding: 1rem 1.6rem;
-      font-size: 1.2rem;
+      font-size: var(--font-size-xs);
     }
 
     &:hover {

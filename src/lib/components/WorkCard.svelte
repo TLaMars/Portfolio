@@ -55,30 +55,30 @@
     }
 
     @include phone-only {
-      height: 24rem;
+      height: 30rem;
       padding: 2.4rem 3.4rem;
       border-radius: 3.4rem;
     }
   }
 
   .subtitle {
-    font-size: 1.4rem;
+    font-size: var(--font-size-s);
     margin: 0;
     text-align: right;
 
     @include phone-only {
-      font-size: 1.2rem;
+      font-size: var(--font-size-xs);
     }
   }
 
   .title {
-    font-size: 3.2rem;
+    font-size: var(--font-size-xl);
     margin-top: 0;
     margin-bottom: 3.2rem;
     text-align: right;
 
     @include phone-only {
-      font-size: 2.4rem;
+      font-size: var(--font-size-l);
       margin-bottom: 2.4rem;
     }
   }

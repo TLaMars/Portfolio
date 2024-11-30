@@ -48,26 +48,26 @@
 
   .title {
     color: var(--foreground);
-    font-size: 12rem;
+    font-size: var(--font-size-x7l);
     margin: 0;
 
     @include phone-only {
-      font-size: 5rem;
+      font-size: var(--font-size-x3l);
     }
 
     @include tablet-only {
-      font-size: 8rem;
+      font-size: var(--font-size-x5l);
     }
   }
 
   .subtitle {
     color: var(--foreground);
-    font-size: 4rem;
+    font-size: var(--font-size-x2l);
     padding: 0;
     margin: 0;
 
     @include phone-only {
-      font-size: 2.5rem;
+      font-size: var(--font-size-l);
     }
   }
 </style>

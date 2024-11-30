@@ -15,14 +15,20 @@
 </section>
 
 <style lang="scss">
+  @use "../../../lib/styles/utils.scss" as *;
+
   section {
-    max-width: 70rem;
+    max-width: var(--content-page-width);
     width: 100%;
-    margin-bottom: 9.2rem;
+    margin-bottom: var(--content-page-gap);
 
     h2 {
       margin-top: 0;
-      font-size: 2.8rem;
+      font-size: var(--font-size-l);
+    }
+
+    @include phone-only {
+      margin-bottom: var(--content-page-gap-mobile);
     }
   }
 </style>
