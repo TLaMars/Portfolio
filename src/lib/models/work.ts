@@ -7,6 +7,8 @@ export type Work = {
   image: string;
   imagePosition: ImagePosition;
   modules: PageModule[];
+  variant: CardVariant;
 };
 
+export type CardVariant = "blue" | "green" | "purple";
 export type ImagePosition = "fill" | "center";

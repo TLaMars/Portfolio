@@ -7,7 +7,7 @@
   --blue: rgb(100, 148, 255);
   --dark-blue: rgb(44, 59, 90);
   --purple: rgb(115, 126, 244);
-  --purple-alpha: rgba(115, 126, 244, 0.25);
+  --dark-purple: rgb(48, 54, 87);
   --orange: rgb(237, 180, 88);
   --white: rgb(255, 255, 255);
   --white-opaque: rgba(255, 255, 255, 0.1);
@@ -16,10 +16,15 @@
   --foreground: var(--white);
   --foreground-accent: var(--green);
   --foreground-accent-secondary: var(--blue);
+  --foreground-accent-tertiary: var(--purple);
 
   --background: var(--black);
   --background-surface-1: var(--dark-green);
   --background-surface-2: var(--dark-blue);
+  --background-surface-3: var(--dark-purple);
+  --background-button-1: var(--green);
+  --background-button-2: var(--blue);
+  --background-button-3: var(--purple);
   --background-opaque: var(--black-opaque);
   --background-active: var(--white-opaque);
 

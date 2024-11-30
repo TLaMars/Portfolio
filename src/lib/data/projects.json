@@ -5,6 +5,7 @@
     "shortDescription": "Your new mac PR tool",
     "image": "/images/gitbar.png",
     "imagePosition": "fill",
+    "variant": "blue",
     "modules": [
       {
         "moduleType": "InfoModule",
@@ -45,6 +46,7 @@
     "shortDescription": "Combined Vodafone and Ziggo app",
     "image": "/images/vfz-dashboard.png",
     "imagePosition": "center",
+    "variant": "green",
     "modules": [
       {
         "moduleType": "InfoModule",
@@ -84,6 +86,7 @@
     "shortDescription": "Your conversation starter",
     "image": "/images/kibbel-question.png",
     "imagePosition": "center",
+    "variant": "purple",
     "modules": [
       {
         "moduleType": "InfoModule",
@@ -123,6 +126,7 @@
     "shortDescription": "The lifestyle brand of Chantal Janzen",
     "image": "/images/andc.png",
     "imagePosition": "fill",
+    "variant": "blue",
     "modules": [
       {
         "moduleType": "InfoModule",

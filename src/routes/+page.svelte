@@ -18,12 +18,13 @@
 />
 
 <div class="work-section">
-  {#each data.work as { name, shortDescription, image, slug, imagePosition }}
+  {#each data.work as { name, shortDescription, image, slug, imagePosition, variant }}
     <WorkCard
       title={name}
       subtitle={shortDescription}
       {imagePosition}
       {image}
+      {variant}
       slug="work/{slug}"
     />
   {/each}

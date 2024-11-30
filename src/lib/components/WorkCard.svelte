@@ -6,14 +6,15 @@
   export let subtitle: string;
   export let image: string;
   export let imagePosition: ImagePosition = "fill";
-  export let type: "blue" | "green" = "blue";
+  export let variant: "blue" | "green" | "purple" = "blue";
   export let slug: string;
 </script>
 
 <a
   class="card"
-  class:green={type === "green"}
-  class:blue={type === "blue"}
+  class:green={variant === "green"}
+  class:blue={variant === "blue"}
+  class:purple={variant === "purple"}
   href={slug}
 >
   <p class="subtitle">{subtitle}</p>
@@ -27,7 +28,12 @@
     />
   </div>
 
-  <div class="fab" class:green={type === "green"} class:blue={type === "blue"}>
+  <div
+    class="fab"
+    class:green={variant === "green"}
+    class:blue={variant === "blue"}
+    class:purple={variant === "purple"}
+  >
     <ArrowRight />
   </div>
 </a>
@@ -52,6 +58,10 @@
 
     &.blue {
       background: var(--background-surface-2);
+    }
+
+    &.purple {
+      background: var(--background-surface-3);
     }
 
     @include phone-only {
@@ -108,11 +118,15 @@
     align-items: center;
 
     &.green {
-      background: var(--foreground-accent);
+      background: var(--background-button-1);
     }
 
     &.blue {
-      background: var(--foreground-accent-secondary);
+      background: var(--background-button-2);
+    }
+
+    &.purple {
+      background: var(--background-button-3);
     }
 
     @include phone-only {
