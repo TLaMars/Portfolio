@@ -19,15 +19,16 @@
     },
     {
       title: "Employer",
-      description: employer
+      description: employer,
+      href: "https://www.wearetriple.com/"
     }
   ]}
 />
 
 <section>
-  <h3>Who am I?</h3>
+  <h3>Hi, I'm Thomas Lamars</h3>
   <p>
-    I'm a frontend developer who loves building beautiful, easy-to-use apps and
+    a frontend developer who loves building beautiful, easy-to-use apps and
     websites. I care about writing good code and enjoy working with clients to
     create the best solutions and user experiences.
   </p>

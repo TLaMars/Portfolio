@@ -13,8 +13,8 @@
 </svelte:head>
 
 <PageHeader
-  title="Hi, I'm <span style='color: var(--foreground-accent-secondary);'>Thomas!</span>"
-  subtitle="A Frontend Developer @ <span style='color: var(--foreground-accent)'>Triple</span>"
+  title="Hi, I'm <span style='color: var(--foreground-accent);'>Thomas</span>!"
+  subtitle="A Frontend Developer @ <span style='color: var(--foreground-accent-secondary)'>Triple</span>"
 />
 
 <div class="work-section">

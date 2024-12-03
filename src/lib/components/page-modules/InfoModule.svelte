@@ -8,11 +8,13 @@
   {#each info as { title, description, href } (title)}
     <div>
       <h4>{title}</h4>
-      {#if href}
-        <a {href} target="_blank">{description}</a>
-      {:else}
-        <p>{description}</p>
-      {/if}
+      <p>
+        {#if href}
+          <a {href} target="_blank">{description}</a>
+        {:else}
+          {description}
+        {/if}
+      </p>
     </div>
   {/each}
 </section>
@@ -36,7 +38,8 @@
       font-weight: var(--font-weight-bold);
     }
 
-    p {
+    p,
+    a {
       margin: 0;
       margin-top: 0.6rem;
     }
