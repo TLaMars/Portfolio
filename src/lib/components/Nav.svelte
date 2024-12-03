@@ -26,5 +26,6 @@
     border-radius: 5rem;
     backdrop-filter: blur(1.4rem);
     gap: 0.4rem;
+    z-index: 1;
   }
 </style>
