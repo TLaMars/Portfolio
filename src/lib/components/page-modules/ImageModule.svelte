@@ -12,9 +12,11 @@
     width: 100%;
     max-width: 90rem;
     margin-bottom: var(--content-page-gap);
+    min-height: 60rem;
 
     @include phone-only {
       margin-bottom: var(--content-page-gap-mobile);
+      min-height: auto;
     }
   }
 </style>

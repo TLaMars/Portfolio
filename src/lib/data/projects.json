@@ -3,7 +3,7 @@
     "slug": "gitbar",
     "name": "GitBar",
     "shortDescription": "Your new mac PR tool",
-    "image": "/images/gitbar.png",
+    "image": "/images/gitbar.webp",
     "imagePosition": "fill",
     "variant": "blue",
     "modules": [
@@ -27,7 +27,7 @@
       },
       {
         "moduleType": "ImageModule",
-        "src": "/images/gitbar.png",
+        "src": "/images/gitbar.webp",
         "alt": "GitBar Dashboard"
       },
       {
@@ -44,7 +44,7 @@
     "slug": "vfz-app",
     "name": "VFZ App",
     "shortDescription": "Combined Vodafone and Ziggo app",
-    "image": "/images/vfz-dashboard.png",
+    "image": "/images/vfz-dashboard.webp",
     "imagePosition": "center",
     "variant": "green",
     "modules": [
@@ -67,7 +67,7 @@
       },
       {
         "moduleType": "ImageModule",
-        "src": "/images/vfz-hero.png",
+        "src": "/images/vfz-hero.webp",
         "alt": "VFZ App Dashboard"
       },
       {
@@ -84,7 +84,7 @@
     "slug": "kibbel",
     "name": "Kibbel",
     "shortDescription": "Your conversation starter",
-    "image": "/images/kibbel-question.png",
+    "image": "/images/kibbel-question.webp",
     "imagePosition": "center",
     "variant": "purple",
     "modules": [
@@ -107,7 +107,7 @@
       },
       {
         "moduleType": "ImageModule",
-        "src": "/images/kibbel-hero.png",
+        "src": "/images/kibbel-hero.webp",
         "alt": "Kibbel Question"
       },
       {
@@ -124,7 +124,7 @@
     "slug": "and-c",
     "name": "&C",
     "shortDescription": "The lifestyle brand of Chantal Janzen",
-    "image": "/images/andc.png",
+    "image": "/images/andc.webp",
     "imagePosition": "fill",
     "variant": "blue",
     "modules": [
@@ -147,7 +147,7 @@
       },
       {
         "moduleType": "ImageModule",
-        "src": "/images/andc-hero.png",
+        "src": "/images/andc-hero.webp",
         "alt": "&C"
       },
       {
