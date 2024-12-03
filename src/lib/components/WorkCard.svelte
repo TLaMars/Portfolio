@@ -47,6 +47,7 @@
     border-radius: 4.8rem;
     height: 38rem;
     overflow: hidden;
+    cursor: pointer;
 
     &:hover {
       color: var(--foreground);
