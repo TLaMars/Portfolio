@@ -21,6 +21,7 @@
     flex-direction: column;
     align-items: center;
     padding: 0 2.4rem;
+    min-height: 100vh;
 
     @include tablet-and-smaller {
       padding: 0 1.6rem;

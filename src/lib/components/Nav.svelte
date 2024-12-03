@@ -11,7 +11,8 @@
 
 <nav>
   <NavLink href="/" label="Home" active={activePath === "/"} />
-  <NavLink href="/work" label="Work" active={activePath === "/work"} />
+  <NavLink href="/about" label="About" active={activePath === "/about"} />
+  <!-- <NavLink href="/work" label="Work" active={activePath === "/work"} /> -->
 </nav>
 
 <style lang="scss">

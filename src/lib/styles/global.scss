@@ -51,11 +51,12 @@ p,
 a,
 li {
   font-size: 1.6rem;
+  line-height: 175%;
 }
 
 a {
   color: var(--foreground);
-  text-decoration: none;
+  // text-decoration: none;
   transition: color 0.2s;
 
   &:hover {

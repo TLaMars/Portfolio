@@ -48,6 +48,7 @@
     height: 38rem;
     overflow: hidden;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover {
       color: var(--foreground);

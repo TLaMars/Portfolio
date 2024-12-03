@@ -10,6 +10,7 @@
   @use "$lib/styles/utils.scss" as *;
 
   a {
+    text-decoration: none;
     padding: 1.2rem 2.4rem;
     border-radius: 5rem;
     transition: background 0.3s;

@@ -7,7 +7,7 @@
   @use "$lib/styles/utils.scss" as *;
 
   footer {
-    position: relative;
+    margin-top: auto;
     max-width: var(--content-page-width-extra-large);
     width: 100%;
     padding: 2.4rem 0;

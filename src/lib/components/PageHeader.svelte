@@ -11,7 +11,7 @@
 >
   <h1 class="title">{@html title}</h1>
   {#if subtitle}
-    <h3 class="subtitle">{@html subtitle}</h3>
+    <h2 class="subtitle">{@html subtitle}</h2>
   {/if}
 </header>
 
