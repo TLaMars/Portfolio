@@ -15,7 +15,7 @@
 </nav>
 
 <style lang="scss">
-  @use "../styles/utils.scss" as *;
+  @use "$lib/styles/utils.scss" as *;
 
   nav {
     position: fixed;

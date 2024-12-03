@@ -28,12 +28,12 @@
 </div>
 
 <style lang="scss">
-  @use "../../lib/styles/utils.scss" as *;
+  @use "$lib/styles/utils.scss" as *;
   .work-section {
     position: relative;
-    max-width: 140rem;
+    max-width: var(--content-page-width-extra-large);
     width: 100%;
-    margin-bottom: 6.4rem;
+    margin-bottom: var(--content-page-gap);
     gap: 5.2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

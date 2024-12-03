@@ -6,7 +6,7 @@
 <img {src} {alt} />
 
 <style lang="scss">
-  @use "../../../lib/styles/utils.scss" as *;
+  @use "$lib/styles/utils.scss" as *;
 
   img {
     width: 100%;

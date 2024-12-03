@@ -16,7 +16,7 @@
 </header>
 
 <style lang="scss">
-  @use "../styles/utils.scss" as *;
+  @use "$lib/styles/utils.scss" as *;
 
   .header {
     display: flex;

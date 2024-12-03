@@ -5,7 +5,7 @@
 </div>
 
 <style lang="scss">
-  @use "../styles/utils.scss" as *;
+  @use "$lib/styles/utils.scss" as *;
 
   .background {
     z-index: -1;

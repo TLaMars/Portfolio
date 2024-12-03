@@ -1,5 +1,6 @@
 <script>
   import Background from "$lib/components/Background.svelte";
+  import Footer from "$lib/components/Footer.svelte";
   import Navigation from "$lib/components/Nav.svelte";
   import "$lib/styles/global.scss";
 </script>
@@ -8,6 +9,7 @@
   <Navigation />
   <Background />
   <slot />
+  <Footer />
 </main>
 
 <style lang="scss">

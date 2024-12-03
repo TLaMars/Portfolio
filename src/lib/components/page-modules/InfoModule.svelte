@@ -18,7 +18,7 @@
 </section>
 
 <style lang="scss">
-  @use "../../../lib/styles/utils.scss" as *;
+  @use "$lib/styles/utils.scss" as *;
 
   .info {
     display: grid;

@@ -7,7 +7,7 @@
 <a {href} class:active>{label}</a>
 
 <style lang="scss">
-  @use "../styles/utils.scss" as *;
+  @use "$lib/styles/utils.scss" as *;
 
   a {
     padding: 1.2rem 2.4rem;
