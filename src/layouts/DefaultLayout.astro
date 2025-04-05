@@ -1,0 +1,19 @@
+---
+import Layout from './Layout.astro';
+import Nav from '../components/Nav.astro';
+import Background from '../components/Background.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <Nav slot="nav" />
+  <Background slot="background" />
+  <slot />
+  <Footer slot="footer" />
+</Layout> 

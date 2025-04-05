@@ -1,0 +1,24 @@
+---
+import type { PageModule } from "../models/page-module";
+import ContentModule from "./page-modules/ContentModule.astro";
+import ImageModule from "./page-modules/ImageModule.astro";
+import InfoModule from "./page-modules/InfoModule.astro";
+
+interface Props {
+  module: PageModule;
+}
+
+const { module } = Astro.props;
+---
+
+{
+  module.moduleType === "ContentModule" && (
+    <ContentModule title={module.title} paragraphs={module.paragraphs} />
+  )
+}
+{module.moduleType === "InfoModule" && <InfoModule info={module.info} />}
+{
+  module.moduleType === "ImageModule" && (
+    <ImageModule src={module.src} alt={module.alt} />
+  )
+}

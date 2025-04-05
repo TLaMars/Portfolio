@@ -1,6 +1,16 @@
 {
   "root": true,
-  "extends": ["triple/svelte"],
+  "extends": ["triple/typescript", "plugin:astro/recommended"],
   "env": { "browser": true, "node": true },
-  "parserOptions": { "project": "./tsconfig.eslint.json" }
+  "parserOptions": { "project": "./tsconfig.eslint.json" },
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
+      }
+    }
+  ]
 }

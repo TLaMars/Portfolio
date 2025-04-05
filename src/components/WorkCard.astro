@@ -1,46 +1,62 @@
-<script lang="ts">
-  import type { ImagePosition } from "$lib/models/work";
-  import ArrowRight from "./svgs/ArrowRight.svelte";
+---
+import ArrowRight from "./svgs/ArrowRight.astro";
+import type { ImagePosition } from "../models/work";
 
-  export let title: string;
-  export let subtitle: string;
-  export let image: string;
-  export let imagePosition: ImagePosition = "fill";
-  export let variant: "blue" | "green" | "purple" = "blue";
-  export let slug: string;
-</script>
+interface Props {
+  title: string;
+  subtitle: string;
+  image: string;
+  imagePosition?: ImagePosition;
+  variant?: "blue" | "green" | "purple";
+  slug: string;
+}
+
+const {
+  title,
+  subtitle,
+  image,
+  imagePosition = "fill",
+  variant = "blue",
+  slug
+} = Astro.props;
+---
 
 <a
-  class="card"
-  class:green={variant === "green"}
-  class:blue={variant === "blue"}
-  class:purple={variant === "purple"}
+  class:list={[
+    "card",
+    {
+      green: variant === "green",
+      blue: variant === "blue",
+      purple: variant === "purple"
+    }
+  ]}
   href={slug}
 >
   <p class="subtitle">{subtitle}</p>
   <h2 class="title">{title}</h2>
   <div class="image-holder">
     <img
-      class="image"
-      class:center={imagePosition === "center"}
+      class:list={["image", { center: imagePosition === "center" }]}
       src={image}
       alt={title}
     />
   </div>
 
   <div
-    class="fab"
-    class:green={variant === "green"}
-    class:blue={variant === "blue"}
-    class:purple={variant === "purple"}
+    class:list={[
+      "fab",
+      {
+        green: variant === "green",
+        blue: variant === "blue",
+        purple: variant === "purple"
+      }
+    ]}
   >
     <ArrowRight />
   </div>
 </a>
 
 <style lang="scss">
-  @use "../styles/utils.scss" as *;
-
   .card {
     position: relative;
     padding: 3.2rem 4.8rem;
@@ -66,7 +82,7 @@
       background: var(--background-surface-3);
     }
 
-    @include phone-only {
+    @media (max-width: 600px) {
       height: 30rem;
       padding: 2.4rem 3.4rem;
       border-radius: 3.4rem;
@@ -78,7 +94,7 @@
     margin: 0;
     text-align: right;
 
-    @include phone-only {
+    @media (max-width: 600px) {
       font-size: var(--font-size-xs);
     }
   }
@@ -89,7 +105,7 @@
     margin-bottom: 3.2rem;
     text-align: right;
 
-    @include phone-only {
+    @media (max-width: 600px) {
       font-size: var(--font-size-l);
       margin-bottom: 2.4rem;
     }
@@ -131,7 +147,7 @@
       background: var(--background-button-3);
     }
 
-    @include phone-only {
+    @media (max-width: 600px) {
       width: 4.8rem;
       height: 4.8rem;
       right: 2.4rem;

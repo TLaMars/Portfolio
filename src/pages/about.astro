@@ -1,0 +1,25 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import ContentModule from "../components/page-modules/ContentModule.astro";
+---
+
+<DefaultLayout title="Thomas Lamars | About">
+  <PageHeader title="About Me" subtitle="Get to know me a bit better" />
+
+  <ContentModule
+    title="Who am I?"
+    paragraphs={[
+      "I'm Thomas Lamars, a Frontend Developer specializing in creating beautiful, responsive, and accessible web experiences.",
+      "With a passion for clean code and intuitive user interfaces, I strive to craft digital solutions that not only look great but also provide exceptional user experiences."
+    ]}
+  />
+
+  <ContentModule
+    title="My Skills"
+    paragraphs={[
+      "My technical toolkit includes expertise in HTML, CSS, JavaScript, and TypeScript. I'm proficient with modern frameworks like React, Svelte, and now Astro!",
+      "I believe in keeping up with industry best practices and constantly learning new technologies to improve my craft."
+    ]}
+  />
+</DefaultLayout>

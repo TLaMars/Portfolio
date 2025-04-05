@@ -1,20 +1,22 @@
-<script lang="ts">
-  export let src: string;
-  export let alt: string;
-</script>
+---
+interface Props {
+  src: string;
+  alt: string;
+}
 
-<img {src} {alt} />
+const { src, alt } = Astro.props;
+---
+
+<img src={src} alt={alt} />
 
 <style lang="scss">
-  @use "$lib/styles/utils.scss" as *;
-
   img {
     width: 100%;
     max-width: 90rem;
     margin-bottom: var(--content-page-gap);
     min-height: 60rem;
 
-    @include phone-only {
+    @media (max-width: 600px) {
       margin-bottom: var(--content-page-gap-mobile);
       min-height: auto;
     }

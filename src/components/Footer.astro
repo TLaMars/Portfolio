@@ -4,8 +4,6 @@
 </footer>
 
 <style lang="scss">
-  @use "$lib/styles/utils.scss" as *;
-
   footer {
     margin-top: auto;
     max-width: var(--content-page-width-extra-large);
@@ -16,9 +14,8 @@
     align-items: center;
     gap: 1.6rem;
 
-    @include tablet-and-smaller {
+    @media (max-width: 768px) {
       padding: 1.6rem 0;
-
       flex-direction: column-reverse;
       gap: 0.8rem;
     }

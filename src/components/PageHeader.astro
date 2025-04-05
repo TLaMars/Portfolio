@@ -1,23 +1,27 @@
-<script lang="ts">
-  export let title: string;
-  export let subtitle: string | undefined = undefined;
-  export let marginSize: "title-page" | "sub-page" = "title-page";
-</script>
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  marginSize?: "title-page" | "sub-page";
+}
+
+const { title, subtitle, marginSize = "title-page" } = Astro.props;
+---
 
 <header
-  class="header"
-  class:title-page={marginSize === "title-page"}
-  class:sub-page={marginSize === "sub-page"}
+  class:list={[
+    "header",
+    {
+      "title-page": marginSize === "title-page",
+      "sub-page": marginSize === "sub-page"
+    }
+  ]}
 >
-  <h1 class="title">{@html title}</h1>
-  {#if subtitle}
-    <h2 class="subtitle">{@html subtitle}</h2>
-  {/if}
+  <h1 class="title" set:html={title} />
+  {subtitle && <h2 class="subtitle" set:html={subtitle} />}
 </header>
 
 <style lang="scss">
-  @use "$lib/styles/utils.scss" as *;
-
   .header {
     display: flex;
     flex-direction: column;
@@ -29,7 +33,7 @@
       margin-top: 28rem;
       margin-bottom: 28rem;
 
-      @include phone-only {
+      @media (max-width: 600px) {
         margin-top: 20rem;
         margin-bottom: 20rem;
       }
@@ -39,7 +43,7 @@
       margin-top: 19.2rem;
       margin-bottom: 9.2rem;
 
-      @include phone-only {
+      @media (max-width: 600px) {
         margin-top: 12rem;
         margin-bottom: 8em;
       }
@@ -51,11 +55,11 @@
     font-size: var(--font-size-x7l);
     margin: 0;
 
-    @include phone-only {
+    @media (max-width: 600px) {
       font-size: var(--font-size-x3l);
     }
 
-    @include tablet-only {
+    @media (min-width: 601px) and (max-width: 900px) {
       font-size: var(--font-size-x5l);
     }
   }
@@ -66,7 +70,7 @@
     padding: 0;
     margin: 0;
 
-    @include phone-only {
+    @media (max-width: 600px) {
       font-size: var(--font-size-l);
     }
   }

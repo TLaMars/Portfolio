@@ -1,27 +1,33 @@
-<script lang="ts">
-  import type { Info } from "$lib/models/info";
+---
+import type { Info } from "../../models/info";
 
-  export let info: Info[];
-</script>
+interface Props {
+  info: Info[];
+}
+
+const { info } = Astro.props;
+---
 
 <section class="info">
-  {#each info as { title, description, href } (title)}
-    <div>
-      <h4>{title}</h4>
-      <p>
-        {#if href}
-          <a {href} target="_blank">{description}</a>
-        {:else}
-          {description}
-        {/if}
-      </p>
-    </div>
-  {/each}
+  {
+    info.map(({ title, description, href }) => (
+      <div>
+        <h4>{title}</h4>
+        <p>
+          {href ? (
+            <a href={href} target="_blank">
+              {description}
+            </a>
+          ) : (
+            description
+          )}
+        </p>
+      </div>
+    ))
+  }
 </section>
 
 <style lang="scss">
-  @use "$lib/styles/utils.scss" as *;
-
   .info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -44,7 +50,7 @@
       margin-top: 0.6rem;
     }
 
-    @include phone-only {
+    @media (max-width: 600px) {
       grid-template-columns: 1fr;
       width: 100%;
       margin-bottom: var(--content-page-gap-mobile);
