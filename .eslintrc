@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": ["triple/typescript", "plugin:astro/recommended"],
+  "extends": ["triple/react", "plugin:astro/recommended"],
   "env": { "browser": true, "node": true },
   "parserOptions": { "project": "./tsconfig.eslint.json" },
   "overrides": [

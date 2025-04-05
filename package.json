@@ -34,6 +34,8 @@
   },
   "type": "module",
   "dependencies": {
+    "@fontsource/poppins": "^5.2.5",
+    "@fontsource/righteous": "^5.2.5",
     "astro": "^5.6.1"
   }
 }

@@ -1,12 +1,11 @@
 @use "./utils.scss" as *;
 @use "./colors.scss" as *;
-@use "./fonts.scss" as *;
 
 :root {
   font-size: 62.5%;
 
-  --font-heading: "Righteous", sans-serif;
-  --font-body: "Poppins", sans-serif;
+  --font-heading: "Righteous", system-ui;
+  --font-body: "Poppins", system-ui;
 
   --font-weight-bold: 700;
   --font-weight-normal: 400;
