@@ -1,9 +1,9 @@
 ---
 import type { Info } from "../../models/info";
 
-interface Props {
+type Props = {
   info: Info[];
-}
+};
 
 const { info } = Astro.props;
 ---
@@ -28,6 +28,8 @@ const { info } = Astro.props;
 </section>
 
 <style lang="scss">
+  @use "../../styles/utils" as *;
+
   .info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -50,7 +52,7 @@ const { info } = Astro.props;
       margin-top: 0.6rem;
     }
 
-    @media (max-width: 600px) {
+    @include phone-only {
       grid-template-columns: 1fr;
       width: 100%;
       margin-bottom: var(--content-page-gap-mobile);

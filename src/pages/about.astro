@@ -2,7 +2,7 @@
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 import PageHeader from "../components/PageHeader.astro";
 import ContentModule from "../components/page-modules/ContentModule.astro";
-import InfoModule from "src/components/page-modules/InfoModule.astro";
+import InfoModule from "../components/page-modules/InfoModule.astro";
 ---
 
 <DefaultLayout title="Thomas Lamars | About">
@@ -12,17 +12,17 @@ import InfoModule from "src/components/page-modules/InfoModule.astro";
     info={[
       {
         title: "Name",
-        description: "Thomas Lamars"
+        description: "Thomas Lamars",
       },
       {
         title: "Location",
-        description: "Alkmaar, Netherlands"
+        description: "Alkmaar, Netherlands",
       },
       {
         title: "Employer",
         description: "Triple | Part of Hypersolid",
-        href: "https://wearetriple.com"
-      }
+        href: "https://wearetriple.com",
+      },
     ]}
   />
 
@@ -30,7 +30,7 @@ import InfoModule from "src/components/page-modules/InfoModule.astro";
     title="Who am I?"
     paragraphs={[
       "I'm Thomas Lamars, a frontend developer who loves building beautiful, easy-to-use apps and websites. I care about writing good code and enjoy working with clients to create the best solutions and user experiences.",
-      "I'm really into React (Native), TypeScript, and Svelte—they're my go-to tools for building cool things. I'm always up for exploring new technologies and seeing what they can do. When I'm not coding, you'll probably find me traveling to new places, piecing together new LEGO creations, or getting lost in a great series."
+      "I'm really into React (Native), TypeScript, and Svelte—they're my go-to tools for building cool things. I'm always up for exploring new technologies and seeing what they can do. When I'm not coding, you'll probably find me traveling to new places, piecing together new LEGO creations, or getting lost in a great series.",
     ]}
   />
 </DefaultLayout>

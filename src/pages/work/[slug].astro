@@ -1,19 +1,16 @@
 ---
-import DefaultLayout from "../../layouts/DefaultLayout.astro";
-import PageHeader from "../../components/PageHeader.astro";
 import ModuleRenderer from "../../components/ModuleRenderer.astro";
-import work from "../../data/work";
-import type { Work } from "../../models/work";
+import PageHeader from "../../components/PageHeader.astro";
+import { works } from "../../data";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
 
-export async function getStaticPaths() {
-  return work.map((item) => ({
-    params: { slug: item.slug },
-    props: { ...item }
-  }));
-}
+const { slug } = Astro.params;
 
-// TypeScript complains without this, even though props come from getStaticPaths
-const { name, modules } = Astro.props as Work;
+const work = works.find((w) => w.slug === slug);
+
+if (!work) return Astro.redirect("/404");
+
+const { name, modules } = work;
 ---
 
 <DefaultLayout title={`Thomas Lamars | ${name}`}>

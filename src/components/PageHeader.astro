@@ -1,9 +1,9 @@
 ---
-interface Props {
+type Props = {
   title: string;
   subtitle?: string;
   marginSize?: "title-page" | "sub-page";
-}
+};
 
 const { title, subtitle, marginSize = "title-page" } = Astro.props;
 ---
@@ -13,8 +13,8 @@ const { title, subtitle, marginSize = "title-page" } = Astro.props;
     "header",
     {
       "title-page": marginSize === "title-page",
-      "sub-page": marginSize === "sub-page"
-    }
+      "sub-page": marginSize === "sub-page",
+    },
   ]}
 >
   <h1 class="title" set:html={title} />
@@ -22,6 +22,8 @@ const { title, subtitle, marginSize = "title-page" } = Astro.props;
 </header>
 
 <style lang="scss">
+  @use "../styles/utils" as *;
+
   .header {
     display: flex;
     flex-direction: column;
@@ -33,7 +35,7 @@ const { title, subtitle, marginSize = "title-page" } = Astro.props;
       margin-top: 28rem;
       margin-bottom: 28rem;
 
-      @media (max-width: 600px) {
+      @include phone-only {
         margin-top: 20rem;
         margin-bottom: 20rem;
       }
@@ -43,7 +45,7 @@ const { title, subtitle, marginSize = "title-page" } = Astro.props;
       margin-top: 19.2rem;
       margin-bottom: 9.2rem;
 
-      @media (max-width: 600px) {
+      @include phone-only {
         margin-top: 12rem;
         margin-bottom: 8em;
       }
@@ -55,11 +57,11 @@ const { title, subtitle, marginSize = "title-page" } = Astro.props;
     font-size: var(--font-size-x7l);
     margin: 0;
 
-    @media (max-width: 600px) {
+    @include phone-only {
       font-size: var(--font-size-x3l);
     }
 
-    @media (min-width: 601px) and (max-width: 900px) {
+    @include tablet-only {
       font-size: var(--font-size-x5l);
     }
   }
@@ -70,7 +72,7 @@ const { title, subtitle, marginSize = "title-page" } = Astro.props;
     padding: 0;
     margin: 0;
 
-    @media (max-width: 600px) {
+    @include phone-only {
       font-size: var(--font-size-l);
     }
   }

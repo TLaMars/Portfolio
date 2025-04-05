@@ -4,9 +4,9 @@ import ContentModule from "./page-modules/ContentModule.astro";
 import ImageModule from "./page-modules/ImageModule.astro";
 import InfoModule from "./page-modules/InfoModule.astro";
 
-interface Props {
+type Props = {
   module: PageModule;
-}
+};
 
 const { module } = Astro.props;
 ---

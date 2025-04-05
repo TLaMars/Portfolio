@@ -1,3 +1,4 @@
+import type { ImageMetadata } from "astro";
 import type { Info } from "./info";
 
 type ContentModule = {
@@ -8,7 +9,7 @@ type ContentModule = {
 
 type ImageModule = {
   moduleType: "ImageModule";
-  src: string;
+  src: ImageMetadata;
   alt: string;
 };
 

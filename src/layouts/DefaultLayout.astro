@@ -1,12 +1,12 @@
 ---
-import Layout from './Layout.astro';
-import Nav from '../components/Nav.astro';
-import Background from '../components/Background.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "./Layout.astro";
+import Nav from "../components/Nav.astro";
+import Background from "../components/Background.astro";
+import Footer from "../components/Footer.astro";
 
-interface Props {
+type Props = {
   title: string;
-}
+};
 
 const { title } = Astro.props;
 ---
@@ -16,4 +16,5 @@ const { title } = Astro.props;
   <Background slot="background" />
   <slot />
   <Footer slot="footer" />
-</Layout> 
+</Layout>
+

@@ -1,15 +1,17 @@
 ---
-import ArrowRight from "./svgs/ArrowRight.astro";
+import type { ImageMetadata } from "astro";
+import ArrowRight from "../assets/svgs/arrow-right.svg";
 import type { ImagePosition } from "../models/work";
+import { Image } from "astro:assets";
 
-interface Props {
+type Props = {
   title: string;
   subtitle: string;
-  image: string;
+  image: ImageMetadata;
   imagePosition?: ImagePosition;
   variant?: "blue" | "green" | "purple";
   slug: string;
-}
+};
 
 const {
   title,
@@ -17,46 +19,25 @@ const {
   image,
   imagePosition = "fill",
   variant = "blue",
-  slug
+  slug,
 } = Astro.props;
 ---
 
-<a
-  class:list={[
-    "card",
-    {
-      green: variant === "green",
-      blue: variant === "blue",
-      purple: variant === "purple"
-    }
-  ]}
-  href={slug}
->
+<a class:list={["card", variant]} href={slug}>
   <p class="subtitle">{subtitle}</p>
   <h2 class="title">{title}</h2>
   <div class="image-holder">
-    <img
-      class:list={["image", { center: imagePosition === "center" }]}
-      src={image}
-      alt={title}
-    />
+    <Image class:list={["image", imagePosition]} src={image} alt={title} />
   </div>
 
-  <div
-    class:list={[
-      "fab",
-      {
-        green: variant === "green",
-        blue: variant === "blue",
-        purple: variant === "purple"
-      }
-    ]}
-  >
+  <div class:list={["fab", variant]}>
     <ArrowRight />
   </div>
 </a>
 
 <style lang="scss">
+  @use "../styles/utils" as *;
+
   .card {
     position: relative;
     padding: 3.2rem 4.8rem;
@@ -82,7 +63,7 @@ const {
       background: var(--background-surface-3);
     }
 
-    @media (max-width: 600px) {
+    @include phone-only {
       height: 30rem;
       padding: 2.4rem 3.4rem;
       border-radius: 3.4rem;
@@ -94,7 +75,7 @@ const {
     margin: 0;
     text-align: right;
 
-    @media (max-width: 600px) {
+    @include phone-only {
       font-size: var(--font-size-xs);
     }
   }
@@ -105,7 +86,7 @@ const {
     margin-bottom: 3.2rem;
     text-align: right;
 
-    @media (max-width: 600px) {
+    @include phone-only {
       font-size: var(--font-size-l);
       margin-bottom: 2.4rem;
     }
@@ -117,6 +98,7 @@ const {
   }
 
   .image {
+    height: unset;
     &.center {
       width: 100%;
     }
@@ -147,7 +129,7 @@ const {
       background: var(--background-button-3);
     }
 
-    @media (max-width: 600px) {
+    @include phone-only {
       width: 4.8rem;
       height: 4.8rem;
       right: 2.4rem;

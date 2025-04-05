@@ -5,7 +5,7 @@ import WorkCard from "../components/WorkCard.astro";
 
 // In Astro, we'll need to fetch the data directly
 // This would likely be coming from a data file or API
-import work from "../data/work";
+import { works } from "../data";
 ---
 
 <DefaultLayout title="Thomas Lamars | FE Developer">
@@ -16,7 +16,7 @@ import work from "../data/work";
 
   <div class="work-section">
     {
-      work.map(
+      works.map(
         ({ name, shortDescription, image, slug, imagePosition, variant }) => (
           <WorkCard
             title={name}

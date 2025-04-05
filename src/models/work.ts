@@ -1,10 +1,11 @@
 import type { PageModule } from "./page-module";
+import type { ImageMetadata } from "astro";
 
 export type Work = {
   slug: string;
   name: string;
   shortDescription: string;
-  image: string;
+  image: ImageMetadata;
   imagePosition: ImagePosition;
   modules: PageModule[];
   variant: CardVariant;

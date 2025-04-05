@@ -1,24 +1,27 @@
 ---
-interface Props {
-  src: string;
+import { Image } from "astro:assets";
+
+type Props = {
+  src: ImageMetadata;
   alt: string;
-}
+};
 
 const { src, alt } = Astro.props;
 ---
 
-<img src={src} alt={alt} />
+<Image src={src} alt={alt} />
 
 <style lang="scss">
+  @use "../../styles/utils" as *;
+
   img {
     width: 100%;
     max-width: 90rem;
     margin-bottom: var(--content-page-gap);
-    min-height: 60rem;
+    height: unset;
 
-    @media (max-width: 600px) {
+    @include phone-only {
       margin-bottom: var(--content-page-gap-mobile);
-      min-height: auto;
     }
   }
 </style>

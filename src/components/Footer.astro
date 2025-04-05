@@ -1,9 +1,11 @@
 <footer>
-  <p>© 2024 Thomas Lamars</p>
+  <p>© 2025 Thomas Lamars</p>
   <a href="https://www.linkedin.com/in/thomaslamars/">LinkedIn</a>
 </footer>
 
 <style lang="scss">
+  @use "../styles/utils" as *;
+
   footer {
     margin-top: auto;
     max-width: var(--content-page-width-extra-large);
@@ -14,7 +16,7 @@
     align-items: center;
     gap: 1.6rem;
 
-    @media (max-width: 768px) {
+    @include tablet-and-smaller {
       padding: 1.6rem 0;
       flex-direction: column-reverse;
       gap: 0.8rem;
