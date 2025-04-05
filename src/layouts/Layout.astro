@@ -1,6 +1,7 @@
 ---
 import "@fontsource/poppins";
-import "@fontsource/righteous";
+import righteousWoff2 from "@fontsource/righteous/files/righteous-latin-400-normal.woff2";
+import poppinsWoff2 from "@fontsource/poppins/files/poppins-latin-400-normal.woff2";
 
 type Props = {
   title: string;
@@ -23,6 +24,8 @@ const { title } = Astro.props;
       content="Thomas Lamars, Frontend Developer, Portfolio"
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" as="font" type="font/woff2" href={righteousWoff2} crossorigin="anonymous" />
+    <link rel="preload" as="font" type="font/woff2" href={poppinsWoff2} crossorigin="anonymous" />
     <title>{title}</title>
   </head>
   <body>
