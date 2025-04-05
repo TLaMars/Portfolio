@@ -1,0 +1,58 @@
+---
+import "@fontsource/poppins";
+import "@fontsource/righteous";
+import righteousWoff2 from "@fontsource/righteous/files/righteous-latin-400-normal.woff2";
+import poppinsWoff2 from "@fontsource/poppins/files/poppins-latin-400-normal.woff2";
+
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Thomas Lamars | Frontend Developer Portfolio"
+    />
+    <meta
+      name="keywords"
+      content="Thomas Lamars, Frontend Developer, Portfolio"
+    />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preload" as="font" type="font/woff2" href={righteousWoff2} />
+    <link rel="preload" as="font" type="font/woff2" href={poppinsWoff2} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="main">
+      <slot name="nav" />
+      <slot name="background" />
+      <slot />
+      <slot name="footer" />
+    </main>
+  </body>
+</html>
+
+<style is:global lang="scss">
+  @use "../styles/utils" as *;
+  @use "../styles/global.scss" as *;
+
+  .main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2.4rem;
+    min-height: 100vh;
+
+    @include phone-only {
+      padding: 0 1.6rem;
+    }
+  }
+</style>

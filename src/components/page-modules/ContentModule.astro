@@ -1,0 +1,32 @@
+---
+type Props = {
+  title?: string;
+  paragraphs?: string[];
+};
+
+const { title, paragraphs } = Astro.props;
+---
+
+<section>
+  {title && <h2>{title}</h2>}
+  {paragraphs && paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+</section>
+
+<style lang="scss">
+  @use "../../styles/utils" as *;
+
+  section {
+    max-width: var(--content-page-width);
+    width: 100%;
+    margin-bottom: var(--content-page-gap);
+
+    h2 {
+      margin-top: 0;
+      font-size: var(--font-size-l);
+    }
+
+    @include phone-only {
+      margin-bottom: var(--content-page-gap-mobile);
+    }
+  }
+</style>

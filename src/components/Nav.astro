@@ -1,0 +1,26 @@
+---
+import NavLink from "./NavLink.astro";
+
+// Get the current path to determine active link
+const pathname = Astro.url.pathname;
+---
+
+<nav>
+  <NavLink href="/" label="Home" active={pathname === "/"} />
+  <NavLink href="/about" label="About" active={pathname === "/about"} />
+  <!-- <NavLink href="/work" label="Work" active={pathname === "/work"} /> -->
+</nav>
+
+<style lang="scss">
+  nav {
+    position: fixed;
+    margin-top: 1.6rem;
+    display: flex;
+    background: var(--background-opaque);
+    padding: 0.4rem;
+    border-radius: 5rem;
+    backdrop-filter: blur(1.4rem);
+    gap: 0.4rem;
+    z-index: 1;
+  }
+</style>
