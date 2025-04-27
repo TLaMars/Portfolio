@@ -7,10 +7,6 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   output: "server",
 
-  experimental: {
-    svg: true,
-  },
-
   adapter: cloudflare({
     imageService: "passthrough",
   }),
