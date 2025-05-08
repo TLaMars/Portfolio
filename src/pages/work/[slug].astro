@@ -2,7 +2,7 @@
 import ModuleRenderer from "../../components/ModuleRenderer.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import { works } from "../../data";
-import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Layout from "../../layouts/Layout.astro";
 
 const { slug } = Astro.params;
 
@@ -13,8 +13,8 @@ if (!work) return Astro.redirect("/404");
 const { name, modules } = work;
 ---
 
-<DefaultLayout title={`Thomas Lamars | ${name}`}>
+<Layout title={`Thomas Lamars | ${name}`}>
   <PageHeader title={name} marginSize="sub-page" />
 
   {modules.map((module) => <ModuleRenderer module={module} />)}
-</DefaultLayout>
+</Layout>

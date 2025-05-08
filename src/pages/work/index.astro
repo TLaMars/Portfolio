@@ -1,11 +1,11 @@
 ---
-import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import WorkCard from "../../components/WorkCard.astro";
 import { works } from "../../data";
 ---
 
-<DefaultLayout title="Thomas Lamars | Work">
+<Layout title="Thomas Lamars | Work">
   <PageHeader title="My Work" subtitle="All the projects I've worked on" />
 
   <div class="work-section">
@@ -24,7 +24,7 @@ import { works } from "../../data";
       )
     }
   </div>
-</DefaultLayout>
+</Layout>
 
 <style lang="scss">
   @use "../../styles/utils" as *;

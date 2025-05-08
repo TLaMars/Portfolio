@@ -1,11 +1,11 @@
 ---
-import DefaultLayout from "../layouts/DefaultLayout.astro";
+import Layout from "../layouts/Layout.astro";
 import PageHeader from "../components/PageHeader.astro";
 import ContentModule from "../components/page-modules/ContentModule.astro";
 import InfoModule from "../components/page-modules/InfoModule.astro";
 ---
 
-<DefaultLayout title="Thomas Lamars | About">
+<Layout title="Thomas Lamars | About">
   <PageHeader title="About Me" marginSize="sub-page" />
 
   <InfoModule
@@ -33,4 +33,4 @@ import InfoModule from "../components/page-modules/InfoModule.astro";
       "I'm really into React (Native), TypeScript, and Svelte—they're my go-to tools for building cool things. I'm always up for exploring new technologies and seeing what they can do. When I'm not coding, you'll probably find me traveling to new places, piecing together new LEGO creations, or getting lost in a great series.",
     ]}
   />
-</DefaultLayout>
+</Layout>

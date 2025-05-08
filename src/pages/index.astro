@@ -1,5 +1,5 @@
 ---
-import DefaultLayout from "../layouts/DefaultLayout.astro";
+import Layout from "../layouts/Layout.astro";
 import PageHeader from "../components/PageHeader.astro";
 import WorkCard from "../components/WorkCard.astro";
 
@@ -8,7 +8,7 @@ import WorkCard from "../components/WorkCard.astro";
 import { works } from "../data";
 ---
 
-<DefaultLayout title="Thomas Lamars | FE Developer">
+<Layout title="Thomas Lamars | FE Developer">
   <PageHeader
     title="Hi, I'm <span style='color: var(--foreground-accent);'>Thomas</span>!"
     subtitle="A Frontend Developer @ <span style='color: var(--foreground-accent-secondary)'>Triple</span>"
@@ -30,7 +30,7 @@ import { works } from "../data";
       )
     }
   </div>
-</DefaultLayout>
+</Layout>
 
 <style lang="scss">
   .work-section {
