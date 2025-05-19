@@ -4,4 +4,10 @@ import { gitbar } from "./projects/gitbar";
 import { kibbel } from "./projects/kibbel";
 import { vfzApp } from "./projects/vfz-app";
 
-export const works: Work[] = [gitbar, vfzApp, kibbel, andC];
+export const works: Work[] = [
+  gitbar,
+  vfzApp,
+  kibbel,
+  andC,
+  // fmGroup
+];

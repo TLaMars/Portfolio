@@ -19,7 +19,7 @@ export const kibbel: Work = {
         },
         {
           title: "Type",
-          description: "iOS/Android app",
+          description: "App",
         },
         {
           title: "Employer",
