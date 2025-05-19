@@ -5,6 +5,7 @@ import type { Work } from "../../models/work";
 export const andC: Work = {
   slug: "and-c",
   name: "&C",
+  featured: true,
   shortDescription: "The lifestyle brand of Chantal Janzen",
   image: AndCImage,
   imagePosition: "fill",

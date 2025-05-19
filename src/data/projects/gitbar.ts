@@ -4,6 +4,7 @@ import type { Work } from "../../models/work";
 export const gitbar: Work = {
   slug: "gitbar",
   name: "GitBar",
+  featured: true,
   shortDescription: "Your new mac PR tool",
   image: GitbarImage,
   imagePosition: "fill",

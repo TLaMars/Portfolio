@@ -4,6 +4,7 @@ import type { ImageMetadata } from "astro";
 export type Work = {
   slug: string;
   name: string;
+  featured?: boolean;
   shortDescription: string;
   image: ImageMetadata;
   imagePosition: ImagePosition;

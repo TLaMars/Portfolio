@@ -5,6 +5,7 @@ import type { Work } from "../../models/work";
 export const vfzApp: Work = {
   slug: "vfz-app",
   name: "VFZ App",
+  featured: true,
   shortDescription: "Combined Vodafone and Ziggo app",
   image: VfzDashboardImage,
   imagePosition: "center",

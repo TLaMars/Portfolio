@@ -6,6 +6,8 @@ import WorkCard from "../components/WorkCard.astro";
 // In Astro, we'll need to fetch the data directly
 // This would likely be coming from a data file or API
 import { works } from "../data";
+
+const featuredWorks = works.filter((work) => work.featured);
 ---
 
 <Layout title="Thomas Lamars | FE Developer">
@@ -16,7 +18,7 @@ import { works } from "../data";
 
   <div class="work-section">
     {
-      works.map(
+      featuredWorks.map(
         ({ name, shortDescription, image, slug, imagePosition, variant }) => (
           <WorkCard
             title={name}

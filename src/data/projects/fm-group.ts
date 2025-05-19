@@ -1,12 +1,13 @@
-import AndCImage from "../../assets/images/andc.webp";
-import AndCHeroImage from "../../assets/images/andc-hero.webp";
+import FMGroupImage from "../../assets/images/fmgroup.avif";
+import FMGroupHeroImage from "../../assets/images/fmgroup-hero.avif";
 import type { Work } from "../../models/work";
 
 export const fmGroup: Work = {
   slug: "fm-group",
   name: "FM Group",
-  shortDescription: "",
-  image: AndCImage,
+  featured: false,
+  shortDescription: "White-label solutions for the flower industry",
+  image: FMGroupImage,
   imagePosition: "fill",
   variant: "blue",
   modules: [
@@ -29,7 +30,7 @@ export const fmGroup: Work = {
     },
     {
       moduleType: "ImageModule",
-      src: AndCHeroImage,
+      src: FMGroupHeroImage,
       alt: "Fleurametz",
     },
     {

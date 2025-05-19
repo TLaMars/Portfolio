@@ -5,6 +5,7 @@ import type { Work } from "../../models/work";
 export const kibbel: Work = {
   slug: "kibbel",
   name: "Kibbel",
+  featured: true,
   shortDescription: "Your conversation starter",
   image: KibbelQuestionImage,
   imagePosition: "center",
