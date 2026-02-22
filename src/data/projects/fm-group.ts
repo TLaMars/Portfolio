@@ -5,7 +5,7 @@ import type { Work } from "../../models/work";
 export const fmGroup: Work = {
   slug: "fm-group",
   name: "FM Group",
-  featured: false,
+  featured: true,
   shortDescription: "White-label solutions for the flower industry",
   image: FMGroupImage,
   imagePosition: "fill",
@@ -16,7 +16,7 @@ export const fmGroup: Work = {
       info: [
         {
           title: "Timeline",
-          description: "2024 - current",
+          description: "2024 - 2025",
         },
         {
           title: "Type",
@@ -38,8 +38,8 @@ export const fmGroup: Work = {
       title: "Summary",
       paragraphs: [
         "FM Group is an umbrella company for several brands in the flower industry, covering flowers, plants, and accessories. They offer a mix of white-label and custom solutions tailored to their clients’ needs.",
-        "I’m part of the Front-End team, mainly working with React Native. I enjoy tackling technical challenges, improving code quality, and making sure the user experience stays smooth. I also help the team understand why changes are needed by providing context and exploring different options, so we can make smart, informed decisions together.",
-        "I’ve contributed to a range of projects: a white-label React Native app, a white-label React web app, the Verdel Merchandise app, a marketing website, and a shared React Native component library. Each project has been an opportunity to grow, collaborate, and support the team in getting the best possible results.",
+        "I was part of the Front-End team, mainly working with React Native. I enjoy tackling technical challenges, improving code quality, and making sure the user experience stays smooth. I also help the team understand why changes are needed by providing context and exploring different options, so we can make smart, informed decisions together.",
+        "I contributed to a range of projects: a white-label React Native app, a white-label React web app, the Verdel Merchandise app, a marketing website, and a shared React Native component library. Each project has been an opportunity to grow, collaborate, and support the team in getting the best possible results.",
       ],
     },
   ],
