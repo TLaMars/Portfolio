@@ -6,4 +6,4 @@ import { kibbel } from "./projects/kibbel";
 import { vfzApp } from "./projects/vfz-app";
 import { wandrd } from "./projects/wandrd";
 
-export const works: Work[] = [gitbar, wandrd, vfzApp, kibbel, andC, fmGroup];
+export const works: Work[] = [gitbar, wandrd, vfzApp, fmGroup, andC, kibbel];

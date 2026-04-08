@@ -10,7 +10,7 @@ export const wandrd: Work = {
   shortDescription: "Track Every Country You've Explored",
   image: WandrdImage,
   imagePosition: "center",
-  variant: "green",
+  variant: "purple",
   modules: [],
   externalUrl: "https://wandrd.app",
 };
