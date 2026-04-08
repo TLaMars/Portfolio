@@ -15,7 +15,7 @@ export const gitbar: Work = {
       info: [
         {
           title: "Timeline",
-          description: "2024 - present",
+          description: "2024 - current",
         },
         {
           title: "Type",

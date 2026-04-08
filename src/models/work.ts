@@ -10,6 +10,8 @@ export type Work = {
   imagePosition: ImagePosition;
   modules: PageModule[];
   variant: CardVariant;
+  externalUrl?: string;
+  comingSoon?: boolean;
 };
 
 export type CardVariant = "blue" | "green" | "purple";

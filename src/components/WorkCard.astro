@@ -11,6 +11,8 @@ type Props = {
   imagePosition?: ImagePosition;
   variant?: "blue" | "green" | "purple";
   slug: string;
+  externalUrl?: string;
+  comingSoon?: boolean;
   size?: "small" | "large";
 };
 
@@ -21,17 +23,25 @@ const {
   imagePosition = "fill",
   variant = "blue",
   slug,
+  externalUrl,
+  comingSoon = false,
   size = "large",
 } = Astro.props;
+
+const href = externalUrl ?? slug;
+const linkProps = externalUrl
+  ? { target: "_blank", rel: "noopener noreferrer" }
+  : {};
 ---
 
-<a class:list={["card", variant, size]} href={slug}>
+<a class:list={["card", variant, size]} href={href} {...linkProps}>
   <p class="subtitle">{subtitle}</p>
   <h2 class="title">{title}</h2>
   <div class="image-holder">
     <Image class:list={["image", imagePosition]} src={image} alt={title} />
   </div>
 
+  {comingSoon && <span class:list={["fab-label", variant]}>Soon</span>}
   <div class:list={["fab", variant]}>
     <ArrowRight />
   </div>
@@ -165,6 +175,43 @@ const {
         width: 3.6rem;
         height: 3.6rem;
       }
+    }
+  }
+
+  .fab-label {
+    position: absolute;
+    z-index: 1;
+    left: 3.8rem;
+    bottom: 3.8rem;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 1.6rem;
+    border-radius: 10rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+
+    &.green {
+      background: var(--background-button-1);
+    }
+
+    &.blue {
+      background: var(--background-button-2);
+    }
+
+    &.purple {
+      background: var(--background-button-3);
+    }
+
+    @include phone-only {
+      left: 2.4rem;
+      bottom: 2.4rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
     }
   }
 </style>

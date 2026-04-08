@@ -11,7 +11,7 @@ import { works } from "../../data";
   <div class="work-section">
     {
       works.map(
-        ({ name, shortDescription, image, slug, imagePosition, variant }) => (
+        ({ name, shortDescription, image, slug, imagePosition, variant, externalUrl, comingSoon }) => (
           <WorkCard
             title={name}
             subtitle={shortDescription}
@@ -19,6 +19,8 @@ import { works } from "../../data";
             image={image}
             variant={variant}
             slug={`/work/${slug}`}
+            externalUrl={externalUrl}
+            comingSoon={comingSoon}
           />
         )
       )

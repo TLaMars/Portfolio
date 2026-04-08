@@ -19,7 +19,7 @@ const featuredWorks = works.filter((work) => work.featured);
   <div class="work-section">
     {
       featuredWorks.map(
-        ({ name, shortDescription, image, slug, imagePosition, variant }) => (
+        ({ name, shortDescription, image, slug, imagePosition, variant, externalUrl, comingSoon }) => (
           <WorkCard
             title={name}
             subtitle={shortDescription}
@@ -27,6 +27,8 @@ const featuredWorks = works.filter((work) => work.featured);
             image={image}
             variant={variant}
             slug={`work/${slug}`}
+            externalUrl={externalUrl}
+            comingSoon={comingSoon}
           />
         )
       )
