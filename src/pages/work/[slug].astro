@@ -4,12 +4,14 @@ import PageHeader from "../../components/PageHeader.astro";
 import { works } from "../../data";
 import Layout from "../../layouts/Layout.astro";
 
-const { slug } = Astro.params;
+export function getStaticPaths() {
+  return works.map((work) => ({
+    params: { slug: work.slug },
+    props: { work },
+  }));
+}
 
-const work = works.find((w) => w.slug === slug);
-
-if (!work) return Astro.redirect("/404");
-
+const { work } = Astro.props;
 const { name, modules } = work;
 ---
 
