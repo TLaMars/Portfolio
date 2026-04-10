@@ -1,6 +1,6 @@
 ---
 import ModuleRenderer from "../../components/ModuleRenderer.astro";
-import PageHeader from "../../components/PageHeader.astro";
+import WorkHeader from "../../components/WorkHeader.astro";
 import { works } from "../../data";
 import Layout from "../../layouts/Layout.astro";
 
@@ -12,11 +12,11 @@ export function getStaticPaths() {
 }
 
 const { work } = Astro.props;
-const { name, modules } = work;
+const { name, shortDescription, modules } = work;
 ---
 
 <Layout title={`Thomas Lamars | ${name}`}>
-  <PageHeader title={name} marginSize="sub-page" />
+  <WorkHeader title={name} subtitle={shortDescription} />
 
   {modules.map((module) => <ModuleRenderer module={module} />)}
 </Layout>

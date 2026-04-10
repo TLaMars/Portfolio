@@ -37,25 +37,31 @@ const { info } = Astro.props;
     max-width: var(--content-page-width);
     width: 100%;
     margin-bottom: var(--content-page-gap);
+    padding-top: 3.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 
     h4 {
-      font-size: var(--font-size-m);
+      font-size: var(--font-size-s);
       margin: 0;
       color: var(--foreground-accent);
       font-family: var(--font-body);
       font-weight: var(--font-weight-bold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     p,
     a {
       margin: 0;
-      margin-top: 0.6rem;
+      margin-top: 0.4rem;
+      font-size: var(--font-size);
     }
 
     @include phone-only {
       grid-template-columns: 1fr;
       width: 100%;
       margin-bottom: var(--content-page-gap-mobile);
+      padding-top: 2.4rem;
     }
   }
 </style>

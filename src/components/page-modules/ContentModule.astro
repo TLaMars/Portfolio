@@ -22,7 +22,14 @@ const { title, paragraphs } = Astro.props;
 
     h2 {
       margin-top: 0;
-      font-size: var(--font-size-l);
+      margin-bottom: 2rem;
+      font-size: var(--font-size-xl);
+      font-family: var(--font-heading);
+      letter-spacing: -0.02em;
+
+      @include phone-only {
+        font-size: var(--font-size-l);
+      }
     }
 
     @include phone-only {

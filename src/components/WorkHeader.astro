@@ -1,0 +1,63 @@
+---
+type Props = {
+  title: string;
+  subtitle?: string;
+};
+
+const { title, subtitle } = Astro.props;
+---
+
+<header class="header">
+  <h1 class="title" set:html={title} />
+  {subtitle && <h2 class="subtitle" set:html={subtitle} />}
+</header>
+
+<style lang="scss">
+  @use "../styles/utils" as *;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: var(--content-page-width);
+    width: 100%;
+    margin-top: 16rem;
+    margin-bottom: 4rem;
+
+    @include phone-only {
+      margin-top: 8rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .title {
+    color: var(--foreground);
+    font-size: var(--font-size-x5l);
+    margin: 0;
+    line-height: 1.2;
+
+    @include phone-only {
+      font-size: var(--font-size-x3l);
+    }
+
+    @include tablet-only {
+      font-size: var(--font-size-x4l);
+    }
+  }
+
+  .subtitle {
+    color: var(--foreground);
+    opacity: 0.6;
+    font-size: var(--font-size-l);
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-normal);
+    padding: 0;
+    margin: 0;
+    margin-top: 1.2rem;
+
+    @include phone-only {
+      font-size: var(--font-size-m);
+    }
+  }
+</style>
