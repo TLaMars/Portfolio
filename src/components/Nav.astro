@@ -1,8 +1,9 @@
 ---
 import NavLink from "./NavLink.astro";
 
-// Get the current path to determine active link
-const pathname = Astro.url.pathname;
+// Static builds emit routes as directories (/about/index.html), so pathname often
+// includes a trailing slash. Dev uses no trailing slash — normalize for comparisons.
+const pathname = Astro.url.pathname.replace(/\/+$/, "") || "/";
 ---
 
 <nav>
