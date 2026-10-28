@@ -9,6 +9,7 @@ export const gitbar: Work = {
   image: GitbarImage,
   imagePosition: "fill",
   variant: "blue",
+  externalUrl: "https://gitbar.app",
   modules: [
     {
       moduleType: "InfoModule",

@@ -6,7 +6,6 @@ export const wandrd: Work = {
   slug: "wandrd",
   name: "Wandrd",
   featured: true,
-  comingSoon: true,
   shortDescription: "Track Every Country You've Explored",
   image: WandrdImage,
   imagePosition: "center",
